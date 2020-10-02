@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        table, td, th {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<html>
+    <body>
+        <h1><%=helloWorld%></h1>
+        <table>
+            <tr>
+                <th>User ID</th>
+                <th>User Name</th>
+                <th>User's Favorite Color</th>
+            </tr>
+            <% for (var i=0; i < queryResults.length; i++) {%>
+                <tr>
+                    <td>
+                        <%=queryResults[i].userID%>
+                    </td>
+                    <td>
+                        <%=queryResults[i].userFirstName + " " + queryResults[i].userLastName%>
+                    </td>
+                    <td>
+                        <%=queryResults[i].userFavoriteColor%>
+                    </td>
+                </tr>
+            <%}%>
+        </table>
+    </body>
+</html>
